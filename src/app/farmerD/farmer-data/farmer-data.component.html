@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-success" (click)="onNewFarmer()">New Farmer Details</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-farmer
+      *ngFor="let farmer of farmerData; let i= index"
+      [farmer]="farmer"
+      [index]="i"></app-farmer>		
+    </div>
+  </div>
+  

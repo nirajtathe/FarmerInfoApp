@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-xs-12">
+      <h1>{{farmerData.farmerName}}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+      <h1>{{farmerData.age}}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+      <h1>{{farmerData.address}}</h1>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-xs-12">
+      <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let farm of farmerData.farm">
+        {{ farm.farmName }} <br>
+        Location : {{ farm.GeoLocation }}
+        
+        <div class="row">
+            <div class="col-xs-12">
+              <ul class="list-group">
+              <li class="list-group-item"
+              *ngFor="let rainy of farm.rainy">
+              Field: {{ rainy.fieldName }} <br> 
+              Crop: {{ rainy.cropName }} <!-- - {{ raniy.polygonData }} -->
+              </li>
+              </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12">
+              <ul class="list-group">
+              <li class="list-group-item"
+              *ngFor="let winter of farm.winter">
+              Field: {{ winter.fieldName }} <br> 
+              Crop: {{ winter.cropName }}<!--  - {{ winter.polygonData }} -->
+              </li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+              <ul class="list-group">
+              <li class="list-group-item"
+              *ngFor="let summer of farm.summer">
+              Field: {{ summer.fieldName }} <br>
+              Field: {{ summer.cropName }} <!-- - {{ summer.polygonData }} -->
+              </li>
+              </ul>
+            </div>
+        </div>
+   
+      </li>
+      </ul>
+    </div>
+  </div>
